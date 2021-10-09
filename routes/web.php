@@ -19,4 +19,7 @@ Route::get('/data-handle/{var}/path', [DataHandleController::class, 'handlePathV
 Route::get('/data-handle/query-string', [DataHandleController::class, 'handleQueryString']);
 Route::get('/data-handle/form', [DataHandleController::class, 'handleForm']);
 Route::post('/data-handle/form', [DataHandleController::class, 'processForm']);
+//layout stuff
+Route::view('/form','layouts.pages.form');
+Route::view('/table','layouts.pages.table');
 
