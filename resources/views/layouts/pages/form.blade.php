@@ -1,8 +1,6 @@
 @extends('layouts.master')
-@section('title')
-    Form Page
-@endsection
-@section('styles')
+@section('title', 'Form Page')
+@section('page-styles')
     <link rel="stylesheet" href="{{ URL::asset('vendor/jquery-ui/css/ui-lightness/jquery-ui-1.10.4.custom.css') }}"/>
     <link rel="stylesheet" href="{{ URL::asset('vendor/select2/select2.css') }}"/>
     <link rel="stylesheet" href="{{ URL::asset('vendor/bootstrap-multiselect/bootstrap-multiselect.css') }}"/>
@@ -33,7 +31,7 @@
                     <li><span>Advanced</span></li>
                 </ol>
 
-                <a class="sidebar-right-toggle" data-open="sidebar-right"><i class="fa fa-chevron-left"></i></a>
+                <a class="sidebar-right-toggle" data-open="sidebar-right"></a>
             </div>
         </header>
 
@@ -1156,7 +1154,7 @@
         <!-- end: page -->
     </section>
 @endsection
-@section('script')
+@section('page-script')
 <script src="{{ URL::asset('vendor/jquery-ui/js/jquery-ui-1.10.4.custom.js') }}"></script>
 <script src="{{ URL::asset('vendor/jquery-ui-touch-punch/jquery.ui.touch-punch.js') }}"></script>
 <script src="{{ URL::asset('vendor/select2/select2.js') }}"></script>
@@ -1182,4 +1180,11 @@
 <script src="{{ URL::asset('vendor/ios7-switch/ios7-switch.js') }}"></script>
 
 @endsection
+@section('page-script-2')
+    <!-- Examples -->
+    <script src="{{ URL::asset('javascripts/forms/examples.advanced.form.js') }}"></script>
+
+
+@endsection
+
 

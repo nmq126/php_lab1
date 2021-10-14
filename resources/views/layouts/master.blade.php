@@ -6,16 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
-    <!-- Web Fonts  -->
-    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Shadows+Into+Light" rel="stylesheet" type="text/css">
-    <!-- Vendor CSS -->
-    <link rel="stylesheet" href="{{ URL::asset('vendor/bootstrap/css/bootstrap.css') }}" />
-    <link rel="stylesheet" href="{{ URL::asset('vendor/font-awesome/css/font-awesome.css') }}" />
-    <link rel="stylesheet" href="{{ URL::asset('vendor/magnific-popup/magnific-popup.css') }}" />
-    <link rel="stylesheet" href="{{ URL::asset('vendor/bootstrap-datepicker/css/datepicker3.css') }}" />
+    @include('layouts.partial.styles')
 
     <!-- Specific Page Vendor CSS -->
-    @yield('styles')
+    @yield('page-styles')
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{{ URL::asset('stylesheets/theme.css') }}" />
 
@@ -40,18 +34,11 @@
         @yield('content')
         <!-- end: content -->
     </div>
-    @include('layouts.partial.sidebar-right')
-    <!-- Vendor -->
-    <script src="{{ URL::asset('vendor/jquery/jquery.js') }}"></script>
-    <script src="{{ URL::asset('vendor/jquery-browser-mobile/jquery.browser.mobile.js') }}"></script>
-    <script src="{{ URL::asset('vendor/bootstrap/js/bootstrap.js') }}"></script>
-    <script src="{{ URL::asset('vendor/nanoscroller/nanoscroller.js') }}"></script>
-    <script src="{{ URL::asset('vendor/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
-    <script src="{{ URL::asset('vendor/magnific-popup/magnific-popup.js') }}"></script>
-    <script src="{{ URL::asset('vendor/jquery-placeholder/jquery.placeholder.js') }}"></script>
+{{--    @include('layouts.partial.sidebar-right')--}}
+    @include('layouts.partial.script')
 
     <!-- Specific Page Vendor -->
-    @yield('script')
+    @yield('page-script')
 
     <!-- Theme Base, Components and Settings -->
     <script src="{{ URL::asset('javascripts/theme.js') }}"></script>
@@ -61,5 +48,8 @@
 
     <!-- Theme Initialization Files -->
     <script src="{{ URL::asset('javascripts/theme.init.js') }}"></script>
+
+    @yield('page-script-2')
+
 </body>
 </html>
